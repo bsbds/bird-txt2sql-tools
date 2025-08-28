@@ -137,8 +137,7 @@ class TextToSQLRunner:
                 logger.info(
                     f"Processing question {i}: {question.get('question', 'N/A')}"
                 )
-                result = await self._run_one(eval_data, i, sql_dialect)
-                final_sql = result["tool_outputs"]["final_sql"]
+                final_sql = await self._run_one(eval_data, i, sql_dialect)
                 return i, final_sql
             except Exception as e:
                 logger.error(f"Error processing question {i}: {e}", exc_info=True)

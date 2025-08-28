@@ -130,7 +130,7 @@ class TextToSQLCLI:
                 print(results_json)
             else:
                 logging.info(f"Running single question {args.question_index}")
-                result = await runner.run(
+                final_sql = await runner.run(
                     args.eval_path,
                     args.db_root_path,
                     question_index=args.question_index,
@@ -138,7 +138,6 @@ class TextToSQLCLI:
                     max_concurrent=args.max_concurrent,
                 )
 
-                final_sql = result["tool_outputs"]["final_sql"]
                 print(f"final sql: {final_sql}")
 
         except Exception as e:
