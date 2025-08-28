@@ -2,6 +2,12 @@
 
 ## Usage
 
+### Installation
+
+``` sh
+pip install git+https://github.com/bsbds/bird-txt2sql-tools.git#subdirectory=bird_runner
+```
+
 ### Implement Agent Interface
 
 You  will implements the `Agent` and `AgentFactory` class. 
