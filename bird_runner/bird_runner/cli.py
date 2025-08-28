@@ -5,7 +5,6 @@ import asyncio
 import json
 import logging
 import sys
-from typing import Dict, Optional
 
 from .agent_interface import AgentFactory
 from .runner import TextToSQLRunner

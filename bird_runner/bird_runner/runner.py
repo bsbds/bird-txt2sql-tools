@@ -6,7 +6,7 @@ Provides the main runner functionality for text-to-SQL workflows.
 import asyncio
 import json
 import logging
-from typing import Any, Dict, Optional
+from typing import Any
 
 from .db_tools import (
     load_eval_data,
@@ -35,7 +35,7 @@ class TextToSQLRunner:
         cls,
         agent_factory: AgentFactory,
         config_path: str,
-        storage_root: Optional[str] = None,
+        storage_root: str | None = None,
     ) -> "TextToSQLRunner":
         """Create a runner from configuration using an agent factory.
 

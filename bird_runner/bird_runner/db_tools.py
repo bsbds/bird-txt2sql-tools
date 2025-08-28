@@ -1,8 +1,6 @@
 import json
 
-from typing import Tuple
-from pydantic import BaseModel, Field
-from sqlalchemy import create_engine, inspect, text, Engine, Inspector
+from sqlalchemy import create_engine, inspect, Engine, Inspector
 from sqlalchemy.exc import SQLAlchemyError
 
 
@@ -24,7 +22,7 @@ def run_load_db_info(
         raise RuntimeError(f"Error loading database information: {str(e)}")
 
 
-def _extract_from_database(db_path: str, dialect: str) -> Tuple[str, str]:
+def _extract_from_database(db_path: str, dialect: str) -> tuple[str, str]:
     """
     Extract schema information directly from database connection.
 
@@ -70,7 +68,7 @@ def _extract_from_database(db_path: str, dialect: str) -> Tuple[str, str]:
         raise RuntimeError(f"Error extracting database schema: {str(e)}")
 
 
-def _extract_from_json(database_name: str, json_file_path: str) -> Tuple[str, str]:
+def _extract_from_json(database_name: str, json_file_path: str) -> tuple[str, str]:
     """
     Extract schema information from JSON file.
 
