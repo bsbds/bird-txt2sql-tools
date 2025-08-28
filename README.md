@@ -7,7 +7,7 @@
 Download from [google drive
 ](https://drive.google.com/file/d/13VLWIwpw5E3d5DUkMvzw7hvHE67a4XkG/view?usp=sharing)
 
-extract and place `dev_databases` in the root folder of this project
+extract and place `MINIDEV/dev_databases` in the root folder of this project
 
 ### Generate Bird Dataset Subset
 
