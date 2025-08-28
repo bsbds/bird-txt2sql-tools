@@ -1,0 +1,16 @@
+openai:
+  api_key: null  # Or via OPENAI_API_KEY environment variable
+  model: "gpt-4"
+  temperature: 0.1
+  max_tokens: 2000
+
+prompt:
+  system_message: |
+    You are an expert SQL developer. Given a natural language question and database schema, 
+    generate a precise SQL query that answers the question.
+    
+    Rules:
+    1. Only return the SQL query, no explanations
+    2. Use proper SQL syntax for the specified dialect
+    3. Consider the table descriptions and schema carefully
+    4. Use external knowledge when provided

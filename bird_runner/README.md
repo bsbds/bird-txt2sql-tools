@@ -55,6 +55,8 @@ if __name__ == "__main__":
     main()
 ```
 
+Check `examples/openai_agent` for a complete example.
+
 ### Run the agent
 
 - Run single question
